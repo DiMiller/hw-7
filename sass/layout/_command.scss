@@ -26,15 +26,16 @@
     text-align: center;
   }
   
-  .card__list .card__item + .card__item {
-    margin-left: 30px;
-  }
+  
   .card__item {
     outline: border -1px -1px solid #eeeeee;
     border-radius: 0px 0px 4px 4px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: #ffffff;
+    .card__list & +  & {
+      margin-left: 30px;
+    }
   }
   
   .person__title {
@@ -56,11 +57,6 @@
     color: var(--main-text-color);
   }
   
-  .social__list {
-    list-style: none;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-  }
+ 
   
  

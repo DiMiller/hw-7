@@ -9,11 +9,10 @@
   
   .clients-list {
     display: flex;
+    & .clients-item + .clients-item {
+      margin-left: 30px;
+    }
   }
-  .clients-list .clients-item + .clients-item {
-    margin-left: 30px;
-  }
-  
   
   .client-link {
     display: flex;
@@ -25,22 +24,18 @@
     border-radius: 4px;
     background-color: #ffffff;
     color: #afb1b8;
-    transition-property: color, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border-color;
+
+    @include transition();
+    
+    &:hover, &:focus {
+      color: var(--accent-color);
+      border-color: var(--accent-color);
+    }
   }
   
   .clients-icon {
     fill: currentColor;
-  
   }
   
-  .client-link:hover {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  .client-link:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-  }
-  
+ 

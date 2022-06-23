@@ -1,7 +1,18 @@
+.social__list {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 .social__item {
     width: 44px;
     height: 44px;
+    .social__list & + & {
+    margin-left: 10px;
   }
+  }
+  
   .social__link {
     display: flex;
     justify-content: center;
@@ -11,24 +22,20 @@
     background-color: #ffffff;
     color: #afb1b8;
     border-radius: 50%;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
+    @include transition($tp:background-color);
+    
+    &:hover,
+    &:focus {
+    background-color: var(--accent-color);
+    color: #ffffff;
+  }
   }
   
   .social__icon {
     fill: currentColor;
   }
   
-  .social__link:hover,
-  .social__link:focus {
-    background-color: var(--accent-color);
-    color: #ffffff;
-  }
   
-  .social__list
-    .social__item
-    + .social__item {
-    margin-left: 10px;
-  }
+  
   
